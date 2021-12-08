@@ -129,6 +129,10 @@
 				color: #0000;
 			}
 
+			#copied {
+				color: #0000;
+			}
+
 			#box:hover #hover {
 				color: #eee;
 
@@ -146,8 +150,9 @@
 		<div id="upper">
 			<a id="title">Horizon's End</a>
 			<a id="description">A space themed Minecraft server where you can build your own starships, fly them to different planets, fight against other players in ship to ship combat, all of this and more without any mods required, just a resource pack!</a>
-			<div id="minecraft"><a>Minecraft 1.17.1</a><div id="box">
+			<div id="minecraft"><a>Minecraft 1.17.1</a><div id="box" onclick="navigator.clipboard.writeText('play.horizonsend.net')">
 				<a id="hover">Click to copy!</a>
+				<a id="copied">Copied!</a>
 				<a id="ip">play.horizonsend.net</a>
 			</div><a id="players">NULL Online</a></div>
 		</div>
