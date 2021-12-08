@@ -4,7 +4,7 @@
 		<title>Horizon's End</title>
 		<meta content="Horizon's End" property="og:title" />
     <meta content="A space themed Minecraft server where you can build your own starships, fly them to different planets, fight against other players in ship to ship combat, all of this and more without any mods required, just a resource pack!" property="og:description" />
-    <meta name="description" content="A space themed Minecraft server where you can build your own starships, fly them to different planets, fight against other players in ship to ship combat, all of this and more without any mods required, just a resource pack!">
+    <meta name="description" content="A space themed Minecraft server where you can build your own starships, fly them to different planets, fight against other players in ship to ship combat.">
 		<meta content="https://www.horizonsend.net" property="og:url" />
     <meta content="https://www.horizonsend.net/resources/background.png" property="og:image" />
 		<style>
@@ -83,7 +83,7 @@
 				margin-bottom: 32px;
 			}
 
-			#description {
+			p {
 				font-size: 16px;
 
 				color: #ddd;
@@ -145,13 +145,17 @@
 
 				transition-duration: 250ms;
 			}
+
+			h2 {
+				font-size: 16px;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="upper">
 			<h1><a id="title">Horizon's End</a></h1>
-			<a id="description">A space themed Minecraft server where you can build your own starships, fly them to different planets, fight against other players in ship to ship combat, all of this and more without any mods required, just a resource pack!</a>
-			<div id="minecraft"><a>Minecraft 1.17.1</a><div id="box" onmouseover="document.getElementById('hover').innerHTML = 'Click to copy!'" onclick="document.getElementById('hover').innerHTML = 'Copied!'; navigator.clipboard.writeText('play.horizonsend.net')">
+			<p>A space themed Minecraft server where you can build your own starships, fly them to different planets, fight against other players in ship to ship combat, all of this and more without any mods required, just a resource pack!</p>
+			<div id="minecraft"><h2>Minecraft 1.17.1</h2><div id="box" onmouseover="document.getElementById('hover').innerHTML = 'Click to copy!'" onclick="document.getElementById('hover').innerHTML = 'Copied!'; navigator.clipboard.writeText('play.horizonsend.net')">
 				<a id="hover">Click to copy!</a>
 				<a id="ip">play.horizonsend.net</a>
 			</div><a id="players">NULL Online</a></div>
