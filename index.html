@@ -1,3 +1,142 @@
-WIP
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Horizon's End</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-<iframe src="https://discord.com/widget?id=916891217596395631&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			* {
+				color: #eee;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			body {
+				background: #000 url(resources/background.png);
+				background-size: 50vh;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+
+				height: 100vh;
+				margin: 0;
+
+				display: grid;
+				grid-template-rows: auto auto auto;
+				grid-template-columns: auto auto auto;
+			}
+
+			#upper,#lower {
+				display: grid;
+			}
+
+			#upper {
+				grid-row: 1;
+				grid-column: 1;
+
+				/* Align top left */
+				justify-self: start;
+				align-self: start;
+			}
+
+			#lower {
+				grid-row: 3;
+				grid-column: 3;
+
+				/* Align bottom right */
+				justify-self: end;
+				align-self: end;
+			}
+
+			button {
+				width: 256px;
+				height: 48px;
+				
+				border-radius: 6px;
+				border: 0;
+
+				margin: 8px;
+			}
+
+			#upper * {
+				margin: 16px;
+			}
+
+			#title {
+				font-size: 64px;
+			}
+
+			#description {
+				font-size: 16px;
+
+				color: #ddd;
+
+				max-width: 512px;
+			}
+
+			#minecraft {
+				display: grid;
+				grid-template-rows: max-content;
+				grid-template-columns: max-content max-content max-content;
+				justify-self: start;
+				align-items: center;
+				margin: 0;
+				padding: 0;
+			}
+
+			#box {
+				display: grid;
+
+				width: max-content;
+
+				padding: 8px;
+
+				background: #222;
+				border-radius: 6px;
+
+			}
+
+			#box a {
+				margin: 0;
+
+				grid-column: 1;
+				grid-row: 1;
+
+				text-align: center;
+
+				transition-duration: 250ms;
+			}
+
+			#hover {
+				color: #0000;
+			}
+
+			#box:hover #hover {
+				color: #eee;
+
+				transition-duration: 250ms;
+			}
+
+			#box:hover #ip {
+				color: #0000; /* If we set its display to none the box size changes */
+
+				transition-duration: 250ms;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="upper">
+			<a id="title">Horizon's End</a>
+			<a id="description">A space themed Minecraft server where you can build your own starships, fly them to different planets, fight against other players in ship to ship combat, all of this and more without any mods required, just a resource pack!</a>
+			<div id="minecraft"><a>Minecraft 1.17.1</a><div id="box">
+				<a id="hover">Click to copy!</a>
+				<a id="ip">play.horizonsend.net</a>
+			</div><a id="players">NULL Online</a></div>
+		</div>
+		<div id="lower">
+			<button style="background: #5865F2">Discord</button>
+			<button style="background: #171515">GitHub</button>
+			<button style="background: #ee3825">Reddit</button>
+		</div>
+
+		<!--<iframe src="https://discord.com/widget?id=916891217596395631&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>-->
+	</body>
+</html>
