@@ -1,0 +1,224 @@
+body{
+	margin:0;
+	background-image: linear-gradient(#000000, #0C0E16 25%,#000F22 75%,#326280 92%,#89e7ff 97%, #CCF5FF 100%),url("https://cdn.discordapp.com/attachments/1039055252453871759/1048173210060996659/custom_end_sky.png");
+	background-blend-mode:lighten;
+	background-attachment: fixed;
+	font-family:'Recursive';
+}
+a:{
+	color: #00C8FF;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #ff5900;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.bkgimg{
+	background-image:url("https://i3.lensdump.com/i/1EToi2.png");
+	background-size: 100vw;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+#tp{
+	color:white;
+}
+#tpcontent{
+	max-width:1000px;
+	margin:auto;
+	padding-left:5%;
+	padding-right:5%;
+	position:relative;
+}
+#title{
+	font-size:60px;
+	padding-top:200px;
+	font-family:'Aldrich';
+	text-decoration:none;
+	color:inherit;
+	display:inline-block;
+}
+#menu{
+	top:0px;
+	position:sticky !important;
+}
+#hambug{
+	display:none;
+	background:#00C8FF;
+	margin:0px;
+	width:100%;
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.mitem{
+ 	display:inline-block;
+	position:relative;
+	padding:15px;
+	text-align:center;
+}
+.mitem:hover{
+	background:rgba(255,255,255,0.8);
+	color:black;
+}
+.mcontent{
+	display:none;
+	position:absolute;
+	margin-top:15px;
+	background:rgba(255,255,255,0.8);
+	padding:15px;
+	width:250px;
+	left:0px;
+}
+.mcontent a{
+	text-decoration:none;
+	color:black;
+	line-height:2;
+	display:inline-block;
+	width:250px;
+	border:0px solid white;
+}
+.mcontent a:hover{
+	color:#00C8FF;
+	background:white;
+	border-left:5px solid #00C8FF;
+	border-right:5px solid #00C8FF;
+	border-radius:10px;
+	box-sizing:border-box;
+	transition: 0.5s;
+}
+.mitem:hover .mcontent{
+	display:block !important;
+}
+#content{
+	color:black;
+	max-width:1000px;
+	padding:5%;
+	margin:auto;
+	background:rgba(255, 255, 255, 0.90);
+	border-top: 10px solid white;
+	border-bottom: 50px solid white;
+}
+/*
+#content{
+	color:white;
+	max-width:1000px;
+	padding:5%;
+	margin:auto;
+	background:rgba(60, 60, 60, 0.90);
+	border-top: 10px solid grey;
+	border-bottom: 10px solid grey;
+}
+*//*
+#content{
+	max-width:1000px;
+	/*max-width:80%;*//*
+	margin:auto;
+	margin-top:100px;
+	margin-bottom:100px;
+	background:white;
+	box-shadow: 0px 0px 50px 50px white, 0px 0px 75px 75px black;
+	border-radius:25px;
+}
+*/
+#content a::after {
+	content:': ' attr(href);
+}
+#bttm{
+	color:white;
+	max-width:1000px;
+	margin:auto;
+	padding-top:50px;
+	padding-bottom:50px;
+	padding-left:5%;
+	padding-right:5%;
+	position:relative;
+	background-image:linear-gradient(#111111,#0C0E16);
+	background-attachment:fixed;
+	height:200px;
+}
+#bttmcontent{
+	max-width:1000px;
+}
+#hebttm{
+	display:table;
+	margin:auto;
+}
+#hebttm a{
+	text-decoration:none;
+	color:white;
+}
+#hebttm img{
+	height:150px;
+	float:left;
+	display:table-cell;
+	margin-left:30px;
+	margin-right:30px;
+}
+#lbttm{
+	height:200px;
+	margin:auto;
+	float:left;
+	text-align:right;
+	display:table-cell;
+	padding:5px;
+}
+#rbttm{
+	height:200px;
+	margin:auto;
+	float:right;
+	text-align:left;
+	display:table-cell;
+	padding:5px;
+}
+@media screen and (min-width: 700px){
+	.mcontent{
+		display:none !important;
+	}
+}
+@media screen and (max-width: 1000px){
+	.bkgimg{
+		background-size: 150vw;
+	}
+}
+@media screen and (max-width: 700px){
+	#title{
+		padding:0;
+	}
+	#hebttm img{
+		position:absolute;
+		opacity:0.3;
+	}
+	.mitem{
+		display:inline;
+		padding:0;
+		margin:0;
+	}
+	.mtitle{
+		display:none;
+	}
+	.mcontent{
+		display:none;
+		position:relative;
+		box-sizing:border-box;
+		width:100%;
+		padding:0;
+		margin:0;
+		z-index:1;
+		background:white;
+		height:100%;
+		transition: 0.5s;
+	}
+	#hambug{
+		display:inline-block;
+	}
+}
+#meirl{
+	opacity:0.5;
+	font-size: 10px;
+	font-family: 'Comic Sans MS';
+	content:"Site by lilclover <3 (for ur info im silly) made thiz sometime in like 2022-2023";
+}
