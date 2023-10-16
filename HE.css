@@ -1,11 +1,12 @@
-body{
+body {
 	margin:0;
 	background-image: linear-gradient(#000000, #0C0E16 25%,#000F22 75%,#326280 92%,#89e7ff 97%, #CCF5FF 100%),url("https://cdn.discordapp.com/attachments/1039055252453871759/1048173210060996659/custom_end_sky.png");
 	background-blend-mode:lighten;
 	background-attachment: fixed;
 	font-family:'Recursive';
 }
-a:{
+
+a {
 	color: #00C8FF;
 	background-color: transparent;
 	text-decoration: none;
@@ -17,7 +18,14 @@ a:visited {
 	text-decoration: none;
 }
 
-.bkgimg{
+.widget {
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	align-content: center;
+}
+
+.backgroundImage {
 	background-image:url("https://i3.lensdump.com/i/1EToi2.png");
 	background-size: 100vw;
 	background-repeat:no-repeat;
@@ -41,7 +49,8 @@ a:visited {
 	color:inherit;
 	display:inline-block;
 }
-#menu{
+
+#menu {
 	top:0px;
 	position:sticky !important;
 }
@@ -54,13 +63,15 @@ a:visited {
 	padding-top:15px;
 	padding-bottom:15px;
 }
-.mitem{
+
+.menuItem {
  	display:inline-block;
 	position:relative;
 	padding:15px;
 	text-align:center;
 }
-.mitem:hover{
+
+.menuItem:hover {
 	background:rgba(255,255,255,0.8);
 	color:black;
 }
@@ -71,7 +82,7 @@ a:visited {
 	background:rgba(255,255,255,0.8);
 	padding:15px;
 	width:250px;
-	left:0px;
+	left: 0;
 }
 .mcontent a{
 	text-decoration:none;
@@ -80,6 +91,8 @@ a:visited {
 	display:inline-block;
 	width:250px;
 	border:0px solid white;
+	text-align: left;
+	padding-left: 5px;
 }
 .mcontent a:hover{
 	color:#00C8FF;
@@ -90,7 +103,8 @@ a:visited {
 	box-sizing:border-box;
 	transition: 0.5s;
 }
-.mitem:hover .mcontent{
+
+.menuItem:hover .mcontent {
 	display:block !important;
 }
 #content{
@@ -127,7 +141,8 @@ a:visited {
 #content a::after {
 	content:': ' attr(href);
 }
-#bttm{
+
+#bottom {
 	color:white;
 	max-width:1000px;
 	margin:auto;
@@ -140,25 +155,30 @@ a:visited {
 	background-attachment:fixed;
 	height:200px;
 }
-#bttmcontent{
+
+#bottomContent {
 	max-width:1000px;
 }
-#hebttm{
+
+#HEBottom {
 	display:table;
 	margin:auto;
 }
-#hebttm a{
+
+#HEBottom a {
 	text-decoration:none;
 	color:white;
 }
-#hebttm img{
+
+#HEBottom img {
 	height:150px;
 	float:left;
 	display:table-cell;
 	margin-left:30px;
 	margin-right:30px;
 }
-#lbttm{
+
+#leftBottom {
 	height:200px;
 	margin:auto;
 	float:left;
@@ -166,7 +186,8 @@ a:visited {
 	display:table-cell;
 	padding:5px;
 }
-#rbttm{
+
+#rightBottom {
 	height:200px;
 	margin:auto;
 	float:right;
@@ -174,13 +195,14 @@ a:visited {
 	display:table-cell;
 	padding:5px;
 }
-@media screen and (min-width: 700px){
+
+@media screen and (min-width: 0px) {
 	.mcontent{
 		display:none !important;
 	}
 }
 @media screen and (max-width: 1000px){
-	.bkgimg{
+	.backgroundImage {
 		background-size: 150vw;
 	}
 }
@@ -188,11 +210,13 @@ a:visited {
 	#title{
 		padding:0;
 	}
-	#hebttm img{
+
+	#HEBottom img {
 		position:absolute;
 		opacity:0.3;
 	}
-	.mitem{
+
+	.menuItem {
 		display:inline;
 		padding:0;
 		margin:0;
@@ -216,7 +240,8 @@ a:visited {
 		display:inline-block;
 	}
 }
-#meirl{
+
+#websiteAuthor {
 	opacity:0.5;
 	font-size: 10px;
 	font-family: 'Comic Sans MS';
