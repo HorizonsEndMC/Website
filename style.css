@@ -22,6 +22,10 @@ a:visited {
 	position: fixed;
 	top: 25px;
 	left: 25px;
+	right: 25px;
+	bottom: 25px;
+	horiz-align: right;
+	vertical-align: top;
 	align-content: center;
 }
 
@@ -238,6 +242,12 @@ a:visited {
 	}
 	#hambug{
 		display:inline-block;
+	}
+}
+
+@media (max-width: 576px) {
+	.widget {
+		display: none;
 	}
 }
 
