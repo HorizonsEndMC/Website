@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Horizon's End</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Space Minecraft Server" name="description">
+    <link href="icons/favicon.ico" rel="shortcut icon">
+    <link crossorigin="use-credentials" href="/site.webmanifest" rel="manifest"/>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Recursive:wght@300&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    const mcntnt = document.getElementsByClassName("mcontent");
+    var tggl = 0;
+
+    function expand() {
+        if (tggl === 0) {
+            for (let i = 0; i < mcntnt.length; i++) {
+                mcntnt[i].style.display = "block";
+            }
+            tggl = 1;
+        } else {
+            for (let i = 0; i < mcntnt.length; i++) {
+                mcntnt[i].style.display = "none";
+            }
+            tggl = 0;
+        }
+    }
+</script>
+<body>
+<div  id="tp">
+    <div class="backgroundImage" id="tpcontent">
+        <a href="index.html" id="title">
+            HORIZON'S END
+        </a>
+        <!--NAVIGATION BAR-->
+        <div id="menu">
+            <div id="hambug" onclick="expand()">menu</div>
+            <div class="menuItem">
+                <div class="mtitle">Resources</div>
+                <div class="mcontent">
+                    <a href="https://github.com/HorizonsEndMC/ResourcePack/releases/latest">Official Resource
+                        Pack</a><br>
+                    <a href="https://bans.horizonsend.net">Bans Website</a><br>
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="mtitle">Maps</div>
+                <div class="mcontent">
+                    <a href="http://creative.horizonsend.net/">Creative Dynmap</a><br>
+                    <a href="http://survival.horizonsend.net/#">Survival Dynmap</a><br>
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="mtitle">Vote</div>
+                <div class="mcontent">
+                    <a href="https://www.planetminecraft.com/server/horizon-s-end/vote/">Vote on Planet
+                        Minecraft</a><br>
+                    <a href="https://minecraftservers.org/vote/638205">Vote on MC Servers</a><br>
+                    <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on Minecraft Server
+                        List</a><br>
+                    <a href="https://minecraft-mp.com/server/306850/vote/">Vote on Minecraft Multiplayer</a><br>
+                    <a href="https://minecraft-mp.com/server/306850/vote/">Vote on TopG</a><br>
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="mtitle">Contacts</div>
+                <div class="mcontent">
+                    <a href="https://discord.gg/9qGwHCcPsr">Discord</a><br>
+                    <a href="https://reddit.com/r/HorizonsEnd">Reddit</a><br>
+                    <a href="https://www.patreon.com/horizonsendmc">Patreon</a><br>
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="mtitle">About</div>
+                <div class="mcontent">
+                    <a href="about.html">About</a><br>
+                    <a href="https://wiki.horizonsend.net">Wiki</a><br>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<!--REGULAR BEGULAR STUFF-->
+<div id="content">
+    Horizon's End is a custom coded space Minecraft server. Pilot your very own movable starship, take over entire
+    sectors of space, avoid pirates, use hyperspace to explore the vast galaxy!
+    <br>
+    The galaxy is a sprawling space map, with 18 unique planets and 7 systems to visit. Our server has an active,
+    growing community that is welcoming to all new players.
+    <br>
+    Join a nation or create your own settlement, all with the goal of galactic domination. The possibilities are
+    endless!
+</div>
+<!--BOTTOM WRAPPER-->
+<div id="bottom">
+    <div id="bottomContent">
+        <div id="HEBottom">
+            <img alt="Horizon's End Logo" src="images/HEwhite.png">
+            <div id="leftBottom">
+                <a href="https://creative.horizonsend.net/">Creative Dynmap</a><br>
+                <a href="https://survival.horizonsend.net/#">Survival Dynmap</a><br>
+                <a href="https://www.planetminecraft.com/server/horizon-s-end/vote/">Vote on Planet Minecraft</a><br>
+                <a href="https://minecraftservers.org/vote/638205">Vote on MC Servers</a><br>
+                <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on Minecraft Server List</a><br>
+                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on Minecraft Multiplayer</a><br>
+                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on TopG</a><br>
+            </div>
+            <div id="rightBottom">
+                <a href="https://github.com/HorizonsEndMC/ResourcePack/releases/latest">Official Resource Pack</a><br>
+                <a href="https://discord.gg/9qGwHCcPsr">Discord</a><br>
+                <a href="https://reddit.com/r/HorizonsEnd">Reddit</a><br>
+                <a href="https://www.patreon.com/horizonsendmc">Patreon</a><br>
+                <a href="about.html">About</a><br>
+                <a href="https://wiki.horizonsend.net">Wiki</a><br>
+            </div>
+        </div>
+    </div>
+    <div id="websiteAuthor">
+        Site by lilclover <3 (for ur info im silly) made thiz sometime in like 2022-2023
+    </div>
+</div>
+</body>
+<iframe allowtransparency="true"
+        class="widget"
+        frameborder="0"
+        height="400"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        src="https://discord.com/widget?id=916891217596395631&theme=dark"
+        width="300">
+</iframe>
+</html>
+<!--
+   IDEAS:
+   RSS FEED FROM DISCORD TO MAIN PAGE
+   DISCORD, PLAYER ACTIVITY
+   -->
