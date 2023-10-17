@@ -20,22 +20,15 @@ a:visited {
 }
 
 #discordWidget {
-	display: flex;
-	position: fixed;
-	width: 15%;
-	height: 90%;
-	margin: 1.25%;
-	left: 0;
-	top: 0;
-	horiz-align: right;
-	vertical-align: top;
-	align-content: center;
+	display: inline-block;
+	float:right;
+	padding:5%;
 }
 
 .widget {
 	display: flex;
-	width: 100%;
-	height: 100%;
+	width: 300px;
+	height: 500px;;
 }
 
 .backgroundImage {
@@ -64,6 +57,7 @@ a:visited {
 }
 
 #menu {
+	z-index:2;
 	top:0;
 	position:sticky !important;
 }
@@ -93,6 +87,7 @@ a:visited {
 	color:black;
 }
 .menuItemContent {
+	z-index:3;
 	display:none;
 	position:absolute;
 	margin-top:15px;
@@ -124,14 +119,19 @@ a:visited {
 .menuItem:hover .menuItemContent {
 	display:block !important;
 }
+
 #content {
+	display: inline-block;
+	width:calc(80% - 310px);
 	color:black;
 	padding:5%;
-	margin:auto;
+/*	margin:auto;*/
 	background:rgba(255, 255, 255, 0.90);
 }
 #content-container {
+	z-index:1;
 	max-width:55%;
+	min-height:600px;
 	background-color: white;
 	margin:auto;
 	padding: 20px 5% 50px;
@@ -177,6 +177,7 @@ a:visited {
 
 #bottomContent {
 	display: flex;
+	margin:auto;
 	max-width:100%;
 }
 
@@ -216,9 +217,21 @@ a:visited {
 	padding:5px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1080px){
 	.backgroundImage {
 		background-size: 150vw;
+	}
+	#HEBottom img {
+		position:absolute;
+		opacity:0.3;
+	}
+    #discordWidget {
+	display:inline;
+	float:none;
+	}
+	#content{
+		width:initial;
+		padding:0;
 	}
 }
 @media screen and (max-width: 700px){
@@ -227,12 +240,6 @@ a:visited {
 		text-align: center;
 		padding: 5% 0 0;
 	}
-
-	#HEBottom img {
-		position:absolute;
-		opacity:0.3;
-	}
-
 	.menuItem {
 		display:inline;
 		padding:0;
@@ -258,32 +265,20 @@ a:visited {
 
 	#mobileMenu{ display:inline-block; }
 
-	#discordWidget {
-		position: absolute;
-		top: 70%;
-		width: 90%;
-		height: 100%;
-		padding: 5%;
-		margin:auto;
-	}
-
 	#topContent {
 		max-width:100%;
 	}
-
 	#content-container {
 		max-width: 80%;
 		padding: 5%;
 	}
-
+	#bottomContent {
+		max-width: 100%;
+	}
 	#bottom {
 		padding: 5%;
 		max-width: 90%;
 		height: 100%;
-	}
-
-	#bottomContent {
-		max-width: 100%;
 	}
 
 	#bottomLogo {
@@ -296,9 +291,11 @@ a:visited {
 }
 
 #websiteAuthor {
+	position:fixed;
+	bottom:0;
 	opacity:0.5;
 	font-size: 10px;
-	padding: 5%;
+	padding: 5px;
 	font-family: 'Comic Sans MS';
 	content:"Site by lilclover <3 (for ur info im silly) made thiz sometime in like 2022-2023";
 }
