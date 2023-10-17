@@ -20,10 +20,9 @@ a:visited {
 
 #discordWidget {
 	position: fixed;
-	top: 25px;
-	left: 25px;
-	right: 25px;
-	bottom: 25px;
+	margin: 25px;
+	left: 0;
+	top: 0;
 	horiz-align: right;
 	vertical-align: top;
 	align-content: center;
@@ -58,7 +57,7 @@ a:visited {
 	top:0px;
 	position:sticky !important;
 }
-#hambug{
+#mobileMenu{
 	display:none;
 	background:#00C8FF;
 	margin:0px;
@@ -79,7 +78,7 @@ a:visited {
 	background:rgba(255,255,255,0.8);
 	color:black;
 }
-.mcontent{
+.menuContent{
 	display:none;
 	position:absolute;
 	margin-top:15px;
@@ -88,7 +87,7 @@ a:visited {
 	width:250px;
 	left: 0;
 }
-.mcontent a{
+.menuContent a{
 	text-decoration:none;
 	color:black;
 	line-height:2;
@@ -98,7 +97,7 @@ a:visited {
 	text-align: left;
 	padding-left: 5px;
 }
-.mcontent a:hover{
+.menuContent a:hover{
 	color:#00C8FF;
 	background:white;
 	border-left:5px solid #00C8FF;
@@ -108,7 +107,7 @@ a:visited {
 	transition: 0.5s;
 }
 
-.menuItem:hover .mcontent {
+.menuItem:hover .menuContent {
 	display:block !important;
 }
 #content{
@@ -201,7 +200,7 @@ a:visited {
 }
 
 @media screen and (min-width: 0px) {
-	.mcontent{
+	.menuContent{
 		display:none !important;
 	}
 }
@@ -228,7 +227,7 @@ a:visited {
 	.mtitle{
 		display:none;
 	}
-	.mcontent{
+	.menuContent{
 		display:none;
 		position:relative;
 		box-sizing:border-box;
@@ -240,7 +239,7 @@ a:visited {
 		height:100%;
 		transition: 0.5s;
 	}
-	#hambug{
+	#mobileMenu{
 		display:inline-block;
 	}
 }
