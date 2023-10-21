@@ -1,0 +1,209 @@
+<script>
+    const menuContent = document.getElementsByClassName("menuItemContent");
+
+    function expand(){
+        const mobileButton = document.getElementById("mobileMenu");
+        const enabled = mobileButton.getAttribute("visible") === "true"
+
+        if (enabled){
+            for (let i = 0; i < menuContent.length; i++) {
+                menuContent[i].style.display = "none";
+            }
+            mobileButton.setAttribute("visible", "false")
+        }
+        else{
+            for (let i = 0; i < menuContent.length; i++) {
+                menuContent[i].style.display = "block";
+            }
+            mobileButton.setAttribute("visible", "true")
+        }
+    }
+</script>
+<div class="backgroundImage" id="topContent">
+    <a href="/" id="title">HORIZON'S END</a>
+    <!--NAVIGATION BAR-->
+    <div id="menu">
+        <div id="mobileMenu" visible="false" onclick="expand()">MENU</div>
+        <div class="menuItem">
+            <div class="menuItemTitle">Resources</div>
+            <div class="menuItemContent">
+                <a href="https://github.com/HorizonsEndMC/ResourcePack/releases/latest">Resource Pack</a><br>
+                <a href="https://www.youtube.com/@horizonsend782/videos">YouTube Tutorials</a><br>
+                <a href="https://bans.horizonsend.net">Bans Website</a><br>
+            </div>
+        </div>
+        <div class="menuItem">
+            <div class="menuItemTitle">Maps</div>
+            <div class="menuItemContent">
+                <a href="http://creative.horizonsend.net/">Creative Dynmap</a><br>
+                <a href="http://survival.horizonsend.net/#">Survival Dynmap</a><br>
+            </div>
+        </div>
+        <div class="menuItem">
+            <div class="menuItemTitle">Vote</div>
+            <div class="menuItemContent">
+                <a href="https://www.planetminecraft.com/server/horizon-s-end/vote/">Vote on Planet Minecraft</a><br>
+                <a href="https://minecraftservers.org/vote/638205">Vote on MC Servers</a><br>
+                <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on Minecraft Server List</a><br>
+                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on Minecraft Multiplayer</a><br>
+                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on TopG</a><br>
+            </div>
+        </div>
+        <div class="menuItem">
+            <div class="menuItemTitle">Contacts</div>
+            <div class="menuItemContent">
+                <a href="https://discord.horizonsend.net">Discord</a><br>
+                <a href="https://reddit.com/r/HorizonsEnd">Reddit</a><br>
+                <a href="https://www.patreon.com/horizonsendmc">Patreon</a><br>
+            </div>
+        </div>
+        <div class="menuItem">
+            <div class="menuItemTitle"><a href="/about">About</a><br></div>
+        </div>
+        <div class="menuItem">
+            <div class="menuItemTitle"><a href="https://wiki.horizonsend.net">Wiki</a><br></div>
+        </div>
+        <div class="menuItem">
+            <div class="menuItemTitle"><a href="https://wiki.horizonsend.net/en/Rules">Rules</a><br></div>
+        </div>
+    </div>
+</div>
+<style>
+    @import "/style.css";
+
+    .backgroundImage {
+        background-image:url("https://i3.lensdump.com/i/1EToi2.png");
+        background-size: 100vw;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+    }
+
+    #top{
+        color:white;
+    }
+
+    #topContent{
+        max-width:55%;
+        margin:auto;
+        padding-left:5%;
+        padding-right:5%;
+        position:relative;
+    }
+
+    #title{
+        font-size:350%;
+        padding-top:15%;
+        font-family: 'Aldrich', sans-serif;
+        text-decoration:none;
+        color:white;
+        display:inline-block;
+    }
+
+    #menu {
+        z-index:2;
+        top:0;
+        position:sticky !important;
+    }
+
+    #mobileMenu {
+        font-family: 'Aldrich', sans-serif;
+        display:none;
+        font-size: 275%;
+        font-weight: bold;
+        background:#00C8FF;
+        margin:0;
+        width:100%;
+        text-align:center;
+        padding-top:0;
+        /*padding-bottom:5%;*/
+    }
+
+    .menuItem {
+        color:white;
+        display:inline-block;
+        position:relative;
+        padding:15px;
+        text-align:center;
+    }
+
+    .menuItem:hover {
+        background:rgba(230,230,230,0.9);
+        color:black;
+    }
+
+    .menuItemContent {
+        z-index:3;
+        display:none;
+        position:absolute;
+        margin-top:15px;
+        background:rgba(230,230,230,0.9);
+        padding:15px;
+        width:250px;
+        left: 0;
+    }
+
+    .menuItemContent a {
+        text-decoration:none;
+        color:black;
+        line-height:2;
+        display:inline-block;
+        width:250px;
+        border:0 solid white;
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    .menuItemContent a:hover {
+        color:#00C8FF;
+        background:white;
+        border-left:5px solid #00C8FF;
+        border-right:5px solid #00C8FF;
+        border-radius:10px;
+        box-sizing:border-box;
+        transition: 0.5s;
+    }
+
+    .menuItemContent a:visited {
+        color:black;
+    }
+
+    .menuItem:hover .menuItemContent {
+        display:block !important;
+    }
+
+    @media screen and (max-width: 700px){
+        #title {
+            font-size: 275%;
+            text-align: center;
+            padding: 5% 0 0;
+        }
+        .menuItem {
+            display:inline;
+            padding:0;
+            margin:0;
+        }
+
+        .menuItemTitle{ display:none; }
+
+        .menuItemContent{
+            display:none; /* Changed by togging the button */
+
+            position:relative;
+            box-sizing:border-box;
+            width:100%;
+            padding:0;
+            margin:0;
+            z-index:1;
+            height:100%;
+
+            background:lightgray;
+            border-bottom: 1px solid darkgray;
+        }
+
+        #mobileMenu{ display:inline-block; }
+
+        #topContent {
+            max-width:100%;
+        }
+    }
+</style>

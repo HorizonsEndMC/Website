@@ -17,81 +17,12 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Recursive:wght@300&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/template/includes.js"></script>
 </head>
 <body>
-<script>
-    const menuContent = document.getElementsByClassName("menuItemContent");
-
-    function expand(){
-        const mobileButton = document.getElementById("mobileMenu");
-        const enabled = mobileButton.getAttribute("visible") === "true"
-
-        console.log(enabled)
-        if (enabled){
-            for (let i = 0; i < menuContent.length; i++) {
-                menuContent[i].style.display = "none";
-            }
-            mobileButton.setAttribute("visible", "false")
-        }
-        else{
-            for (let i = 0; i < menuContent.length; i++) {
-                menuContent[i].style.display = "block";
-            }
-            mobileButton.setAttribute("visible", "true")
-        }
-    }
-</script>
-<div id="top">
-    <div class="backgroundImage" id="topContent">
-        <a href="/" id="title">HORIZON'S END</a>
-        <!--NAVIGATION BAR-->
-        <div id="menu">
-            <div id="mobileMenu" visible="false" onclick="expand()">MENU</div>
-            <div class="menuItem">
-                <div class="menuItemTitle">Resources</div>
-                <div class="menuItemContent">
-                    <a href="https://github.com/HorizonsEndMC/ResourcePack/releases/latest">Resource Pack</a><br>
-                    <a href="https://www.youtube.com/@horizonsend782/videos">YouTube Tutorials</a><br>
-                    <a href="https://bans.horizonsend.net">Bans Website</a><br>
-                </div>
-            </div>
-            <div class="menuItem">
-                <div class="menuItemTitle">Maps</div>
-                <div class="menuItemContent">
-                    <a href="http://creative.horizonsend.net/">Creative Dynmap</a><br>
-                    <a href="http://survival.horizonsend.net/#">Survival Dynmap</a><br>
-                </div>
-            </div>
-            <div class="menuItem">
-                <div class="menuItemTitle">Vote</div>
-                <div class="menuItemContent">
-                    <a href="https://www.planetminecraft.com/server/horizon-s-end/vote/">Vote on Planet Minecraft</a><br>
-                    <a href="https://minecraftservers.org/vote/638205">Vote on MC Servers</a><br>
-                    <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on Minecraft Server List</a><br>
-                    <a href="https://minecraft-mp.com/server/306850/vote/">Vote on Minecraft Multiplayer</a><br>
-                    <a href="https://minecraft-mp.com/server/306850/vote/">Vote on TopG</a><br>
-                </div>
-            </div>
-            <div class="menuItem">
-                <div class="menuItemTitle">Contacts</div>
-                <div class="menuItemContent">
-                    <a href="https://discord.horizonsend.net">Discord</a><br>
-                    <a href="https://reddit.com/r/HorizonsEnd">Reddit</a><br>
-                    <a href="https://www.patreon.com/horizonsendmc">Patreon</a><br>
-                </div>
-            </div>
-            <div class="menuItem">
-                <div class="menuItemTitle"><a href="about">About</a><br></div>
-            </div>
-            <div class="menuItem">
-                <div class="menuItemTitle"><a href="https://wiki.horizonsend.net">Wiki</a><br></div>
-            </div>
-            <div class="menuItem">
-                <div class="menuItemTitle"><a href="https://wiki.horizonsend.net/en/Rules">Rules</a><br></div>
-            </div>
-        </div>
-    </div>
-</div>
+<div id="topBar"></div>
 <!--REGULAR BEGULAR STUFF-->
 <div id="content-container">
     <div id="content">
@@ -120,41 +51,6 @@
         <a href="https://wiki.horizonsend.net">Wiki</a>
     </div>
 </div>
-<!--BOTTOM WRAPPER-->
-<div id="bottom">
-    <div id="bottomContent">
-        <div id="HEBottom">
-            <img src="images/HEwhite.png">
-            <div id="leftBottom">
-                <a href="http://creative.horizonsend.net/">Creative Dynmap</a><br>
-                <a href="http://survival.horizonsend.net/#">Survival Dynmap</a><br>
-                <a href="https://www.planetminecraft.com/server/horizon-s-end/vote/">Vote on Planet Minecraft</a><br>
-                <a href="https://minecraftservers.org/vote/638205">Vote on MC Servers</a><br>
-                <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on Minecraft Server List</a><br>
-                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on Minecraft Multiplayer</a><br>
-                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on TopG</a><br>
-            </div>
-            <div id="rightBottom">
-                <a href="https://github.com/HorizonsEndMC/ResourcePack/releases/latest">Resource Pack</a><br>
-                <a href="https://discord.horizonsend.net">Discord</a><br>
-                <a href="https://reddit.com/r/HorizonsEnd">Reddit</a><br>
-                <a href="https://www.patreon.com/horizonsendmc">Patreon</a><br>
-                <a href="about">About</a><br>
-                <a href="https://horizonsendmc.miraheze.org/wiki/Main_Page">Wiki</a><br>
-            </div>
-        </div>
-    </div>
-    <iframe allowtransparency="true"
-            class="widget"
-            frameborder="0"
-            height="400"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            src="https://discord.com/widget?id=916891217596395631&theme=dark"
-            width="300">
-    </iframe>
-</div>
-<div id="websiteAuthor">
-    Site by lilclover <3 (for ur info im silly) made thiz sometime in like 2022-2023
-</div>
+<div id="bottomBar"></div>
 </body>
 </html>

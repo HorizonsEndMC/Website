@@ -1,0 +1,115 @@
+<div id="bottom">
+  <div id="bottomContent">
+    <div id="HEBottom">
+      <img alt="Horizon's End Logo" src="/images/HEwhite.png" id="bottomLogo">
+      <div id="leftBottom">
+        <a href="https://creative.horizonsend.net/">Creative Dynmap</a><br>
+        <a href="https://survival.horizonsend.net/#">Survival Dynmap</a><br>
+        <a href="https://www.planetminecraft.com/server/horizon-s-end/vote/">Vote on Planet Minecraft</a><br>
+        <a href="https://minecraftservers.org/vote/638205">Vote on MC Servers</a><br>
+        <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on Minecraft Server List</a><br>
+        <a href="https://minecraft-mp.com/server/306850/vote/">Vote on Minecraft Multiplayer</a><br>
+        <a href="https://minecraft-mp.com/server/306850/vote/">Vote on TopG</a><br>
+      </div>
+      <div id="rightBottom">
+        <a href="https://github.com/HorizonsEndMC/ResourcePack/releases/latest">Resource Pack</a><br>
+        <a href="https://discord.horizonsend.net">Discord</a><br>
+        <a href="https://reddit.com/r/HorizonsEnd">Reddit</a><br>
+        <a href="https://www.patreon.com/horizonsendmc">Patreon</a><br>
+        <a href="/about">About</a><br>
+        <a href="https://wiki.horizonsend.net">Wiki</a><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="websiteAuthor">
+  Site by lilclover <3 (for ur info im silly) made thiz sometime in like 2022-2023
+</div>
+
+<style>
+  @import "/style.css";
+
+  #bottom {
+    color:white;
+    display: flex;
+    max-width:55%;
+    margin:auto;
+    padding: 50px 5%;
+    position:relative;
+    background-image:linear-gradient(#111111,#0C0E16);
+    background-attachment:fixed;
+    height:200px;
+  }
+
+  #bottomContent {
+    display: flex;
+    margin:auto;
+    max-width:100%;
+  }
+
+  #HEBottom {
+    display:table;
+    margin:auto;
+  }
+
+  #HEBottom a {
+    text-decoration:none;
+    color:white;
+  }
+
+  #HEBottom img {
+    height:150px;
+    float:left;
+    display:table-cell;
+    margin-left:30px;
+    margin-right:30px;
+  }
+
+  #leftBottom {
+    height:200px;
+    margin:auto;
+    float:left;
+    text-align:right;
+    display:table-cell;
+    padding:5px;
+  }
+
+  #rightBottom {
+    height:200px;
+    margin:auto;
+    float:right;
+    text-align:left;
+    display:table-cell;
+    padding:5px;
+  }
+
+  @media screen and (max-width: 700px){
+    #bottomContent {
+      max-width: 100%;
+    }
+    #bottom {
+      padding: 5%;
+      max-width: 90%;
+      height: 100%;
+    }
+
+    #bottomLogo {
+      display: none;
+    }
+
+    #HEBottom {
+      font-size: 80%;
+    }
+  }
+
+  #websiteAuthor {
+    position:fixed;
+    bottom:0;
+    opacity:0.5;
+    font-size: 10px;
+    padding: 5px;
+    font-family: 'Comic Sans MS';
+    content:"Site by lilclover <3 (for ur info im silly) made thiz sometime in like 2022-2023";
+  }
+</style>
