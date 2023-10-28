@@ -1,0 +1,116 @@
+@import "/style.css";
+
+#rules {
+    padding: 1% 5% 5%;
+}
+
+.tooltip {
+    border-bottom: 1px dotted rgb(128, 128, 128);
+    width: 100%;
+}
+
+.tooltip .hoverText  {
+    display: none;
+
+    width: fit-content;
+
+    background-color: black;
+    color: #e8e6e3;
+    text-align: center;
+    padding: 1%;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 45px;
+    padding: 0 0 0 2%;
+    margin: 3% 0 1% 0;
+}
+
+ul {
+    font-size: 150%;
+    margin: 0;
+}
+
+li {
+    font-size: 30px;
+}
+
+li p {
+    font-size: 66.6%;
+    margin: 0 0 2% 0.5%;
+}
+
+.tooltip:hover .hoverText {
+    display: block;
+}
+
+.tooltip .hoverText .list-item {
+    text-align: left;
+    padding: 0;
+}
+
+.dropdown-button-container {
+    padding-top: 1%;
+}
+
+.dropdown-button {
+    width: 100%;
+    background-color: #3498DB;
+    color: white;
+    padding: 1%;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-button:hover, .dropdown-button:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content-container {
+    padding-bottom: 1%;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    overflow: auto;
+    z-index: 1;
+}
+
+.dropdown-content-information {
+    color: black;
+    padding: 1% 3% 1% 1.25%;
+    font-size: 100%;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+
+.dropdown-content-entry {
+    color: black;
+    padding: 1% 1.5% 1% 2%;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+
+.dropdown-content-entry p {
+    padding: 0 0 0 4%;
+    margin: 1% 0 0 0;
+}
+
+.dropdown a:hover { background-color: #ddd; }
+
+.show { display: block; }

@@ -4,7 +4,7 @@ body {
 
 	height: 100%;
 	margin:0;
-	background-image: linear-gradient(#000000, #0C0E16 25%,#000F22 75%,#326280 92%,#89e7ff 97%, #CCF5FF 100%),url("https://cdn.discordapp.com/attachments/1039055252453871759/1048173210060996659/custom_end_sky.png");
+	background-image: linear-gradient(#000000, #0C0E16 25%,#000F22 75%,#326280 92%,#89e7ff 97%, #CCF5FF 100%),url("https://assets.horizonsend.net/custom_end_sky.png");
 	background-blend-mode:lighten;
 	background-attachment: fixed;
 	font-family:'Recursive';
@@ -41,8 +41,15 @@ a:visited {
 /*	margin:auto;*/
 }
 
-#rules {
-	padding: 5%;
+#content-title {
+	font-family: 'Aldrich', sans-serif;
+	font-size: 300%;
+	color: white;
+	text-align: center;
+
+	padding-top: 2.5%;
+	width: 100%;
+	margin: auto;
 }
 
 #content-container {
