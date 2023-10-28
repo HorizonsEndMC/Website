@@ -16,7 +16,7 @@
 
     background-color: black;
     color: #e8e6e3;
-    text-align: center;
+    text-align: left;
     padding: 1%;
 
     /* Position the tooltip */
@@ -28,7 +28,13 @@ h1 {
     font-family: 'Aldrich', sans-serif;
     font-size: 45px;
     padding: 0 0 0 2%;
-    margin: 3% 0 1% 0;
+    margin: 3% 0 0 0;
+}
+
+h2 {
+    font-size: 20px;
+    padding: 0 0 0 3%;
+    margin: 0 0 1% 0;
 }
 
 ul {
@@ -47,10 +53,12 @@ li p {
 
 .tooltip:hover .hoverText {
     display: block;
+    margin: 1%;
 }
 
-.tooltip .hoverText .list-item {
+.list-item {
     text-align: left;
+    margin: 0 0 0 5%;
     padding: 0;
 }
 
