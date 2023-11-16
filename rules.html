@@ -13,14 +13,15 @@
 
     <link href="icons/favicon.ico" rel="shortcut icon">
 
-    <link href="style.css" rel="stylesheet">
-    <link href="rules.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/rules.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Recursive:wght@300&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/scripts/includes.js"></script>
+    <script src="/scripts/dropdown.js"></script>
 </head>
 <body>
 <div id="topBar"></div>
@@ -77,45 +78,70 @@
             </div>
         </div>
 
+        <div id="conduct">
         <h1>Conduct Rules</h1>
         <h2>Rules relating to how players conduct themselves in any communication channel</h2>
         <ol>
-            <li>
+            <li id="conduct_respect">
                 Respect All Players
                 <p>
-                    Hate speech, homophobia, transphobia, racism, sexism, ableism, defamation, and other forms of harassment will not be tolerated. This includes the use of racial, ethnic, or homophobic slurs. Constant petty insults that create a toxic atmosphere will also not be allowed.
-                    Punishments will be situational, but we reserve the right to ban a user should we judge the incident to be severe.
-                    Server staff may not be aware that something is considered hate speech, in this instance please open a report. (See: Note 3)
-                    We take our players’ privacy and safety very seriously. Any threat of malicious actions such as harm, exposure of personal information, or DDOS attacks will be met with an immediate permanent ban. Any violation of Discord’s policies will be reported directly to Discord.
+                    We take our player&apos;s privacy and safety very seriously. Any threat of malicious actions such as
+                    harm,
+                    exposure of personal information, or DDOS attacks will be met with an immediate ban.
+                    Any violation of Discord&apos;s policies will be reported directly to Discord.
                 </p>
             </li>
-            <li>
+            <li id="hateful_conduct">
+                No Hateful Conduct
+                <p>
+                    Hate speech, homophobia, transphobia, racism, sexism, ableism, defamation, and other forms of
+                    harassment will not be tolerated. This includes the use of racial, ethnic, or homophobic slurs.
+                    Constant petty insults that create a toxic atmosphere will also not be allowed.
+                    Punishments will be situational, but we reserve the right to ban a user should we judge the incident
+                    to be severe.
+                    Server staff may not be aware that something is considered hate speech, in this instance please open
+                    a report. (See: Note 3)
+                </p>
+            </li>
+            <li id="spamming">
                 No Spamming
                 <p>
-                    Refrain from posting repeat messages, excessive capitalization, excessive emotes, excessive arguments, and tagging people unnecessarily. Memes channels are an appropriate place for some spam, such as copy-pastas or other such obnoxious posts.
-                    Make a reasonable effort to use channels for their respective purposes. If you aren’t sure of a channel's topic, check its description.
+                    Refrain from posting repeat messages, excessive capitalization, excessive emotes, excessive
+                    arguments, and tagging people unnecessarily.
+                    Make a reasonable effort to use channels for their respective purposes. If you aren&apos;t sure of a
+                    channel&apos;s topic, check its description.
                     Additionally, English is the only language to be used in public channels. Most players here only understand English, as do the moderators. Please keep it to private messages with others who may understand.
                 </p>
             </li>
-            <li>
+            <li id="adult_content">
                 No Sexual/Adult Content
                 <p>
-                    We do not allow any Sexual/Adult content of a provocative nature, we have no channels in which such content would be appropriate or allowed.
-                    Sexual/Adult content includes nudity, porn, hentai, gore, smut, Nazi-related content, genitalia. If you are unsure if it is considered NSFW/suggestive, it would be best to keep it to yourself.
-                    We do not allow the discussion/reference of illegal drugs, such as cocaine, meth, and other such hard drugs. Drugs such as weed and similar are accepted.
+                    We do not allow any Sexual content, we have no channels in which such content would be appropriate
+                    or allowed.
+                    Sexual/Adult content includes nudity, gore, etc. If you are unsure if it is considered
+                    NSFW/suggestive.
+                    Discussion of <span class="tooltip">hard drugs<span
+                        class="hoverText">Psychedelics, opiods, etc.</span></span> is also prohibited.
                 </p>
             </li>
-            <li>
+            <li id="advertising">
                 No Advertising
                 <p>
-                    This is not the place for you to promote your server. There are plenty of listing sites for that. This does not mean talking about other servers is outright banned. However, if you are slandering or found to be subtly attempting advertisement, moderators will take action.
+                    This is not the place for you to promote your server. This does not mean talking about other servers
+                    is outright banned. However, if you are slandering or found to be subtly attempting advertisement,
+                    moderators will take action.
                     This rule also applies to other servers, advertisement of Horizon's End in any community where it is not allowed will be considered a violation of this rule.
                 </p>
             </li>
-            <li>
+            <li id="misrepresenting_rules">
                 Do not misrepresent rules
                 <p>
-                    Players must not purposely fabricate, misrepresent, or otherwise give other players a false impression of the server rules. A player who received punishment for a violation that they were unfairly manipulated into via intentional misrepresentation on the part of another player shall have their punishments reversed unless there is compelling reasoning not to do so. A player who intentionally violates this rule (as in, willfully misrepresents the rules to gain an advantage) will be punished and will be forced to reimburse the victim for any and all material losses captured as a result of the violation."
+                    Players must not purposely fabricate, misrepresent, or otherwise give other players a false
+                    impression of the server rules.
+                    A player who received punishment for a violation that they were unfairly manipulated into via
+                    intentional misrepresentation on
+                    the part of another player shall have their punishments reversed unless there is compelling
+                    reasoning not to do so.
                 </p>
             </li>
         </ol>
@@ -126,41 +152,74 @@
             </div>
             <div class="dropdown-content-container">
                 <div class="dropdown-content">
-                    <div class="dropdown-content-information">
-                        AAAAAAAAAAAAAAAA
-                    </div>
+                    <table>
+                        <tr>
+                            <th>Infraction</th>
+                            <th>Offense 1</th>
+                            <th>Offense 2</th>
+                            <th>Offense 3</th>
+                            <th>Offense 4</th>
+                        </tr>
+                        <tr>
+                            <th><span onclick="jumpTo('conduct')" class="jump">Chat Violations</span></th>
+                            <th>Warning</th>
+                            <th>3-5 hour mute</th>
+                            <th>1-3 day mute</th>
+                            <th>Staff Discretion</th>
+                        </tr>
+                        <tr>
+                            <th><span onclick="jumpTo('hateful_conduct')" class="jump">Hate Speech</span></th>
+                            <th>1-2 day mute</th>
+                            <th>4-8 day mute</th>
+                            <th>14 day mute</th>
+                            <th>Staff Discretion</th>
+                        </tr>
+                        <tr>
+                            <th><span onclick="jumpTo('adult_content')" class="jump">Sexual/Adult Content</span></th>
+                            <th>3-4 day mute</th>
+                            <th>6-7 day mute</th>
+                            <th>Staff Discretion</th>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
+        </div>
 
+        <div id="general">
         <h1>General Rules</h1>
         <h2>Rules that apply in all situations, through gameplay or communication channels.</h2>
 
         <ol>
-            <li>
+            <li id="general_harassment">
                 No Harassment
                 <p>
                     Actions aimed at making the server unplayable, or a significantly worse experience, for another player will not be tolerated.
-                    These actions include, but are not limited to, placing automatic defenses near another player’s base, building obstructions around someone’s settlement, or repeatedly killing them once all value from doing so has evaporated.
+                    These actions include, but are not limited to, placing automatic defenses near another player&apos;s
+                    base, building obstructions around someone&apos;s settlement, or repeatedly killing them once all
+                    value from doing so has evaporated.
                     Punishments will be situational, but we reserve the right to ban a user should we judge the incident to be severe.
                 </p>
             </li>
-            <li>
+            <li id="bypass_punishments">
                 Do Not Bypass Punishments
                 <p>
                     Do not attempt to bypass any punishment using glitches, alternate accounts or client modifications.
                 </p>
             </li>
-            <li>
+            <li id="alternate_accounts">
                 Alternate Accounts Are Not Allowed
                 <p>
                     We do not allow alternate accounts on Horizon's End. If you have a roommate/sibling on the same IP, be sure to clear it up with staff prior to them logging on.
                 </p>
             </li>
-            <li>
+            <li id="design_theft">
                 Do Not Steal Designs
                 <p>
-                    Do not attempt to steal another player’s design, including ships / buildings / BDPs, to use for your own purposes. Additionally, if you are granted blueprint rights to a ship, the main contributor of the build is able to revoke your rights at any time for the printing of said ship. If anyone disagrees, staff action will be taken.
+                    Do not attempt to steal another player&apos;s design, including ships / buildings / BDPs, to use for
+                    your own purposes. Additionally, if you are granted blueprint rights to a ship, the main contributor
+                    of the build is able to revoke your rights at any time for the printing of said ship. If anyone
+                    disagrees, staff action will be taken.
                 </p>
             </li>
         </ol>
@@ -171,70 +230,123 @@
             </div>
             <div class="dropdown-content-container">
                 <div class="dropdown-content">
-                    <div class="dropdown-content-information">
-                        AAAAAAAAAAAAAAAA
-                    </div>
+                        <table>
+                            <tr>
+                                <th>Infraction</th>
+                                <th>Offense 1</th>
+                                <th>Offense 2</th>
+                                <th>Offense 3</th>
+                                <th>Offense 4</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('general_harassment')" class="jump">Harassment</span></th>
+                                <th>Warning</th>
+                                <th>2-4 day ban</th>
+                                <th>6-7 day ban</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('bypass_punishments')" class="jump">Bypassing Punishments</span></th>
+                                <th>Warning (ban of alt)</th>
+                                <th>If mute: ban alt. If Ban: Extension of ban </th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('alternate_accounts')" class="jump">Using Alternate Accounts</span></th>
+                                <th>Warning (ban of alt)</th>
+                                <th>Staff Discretion (ban of alt)</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('design_theft')" class="jump">Design Theft</span></th>
+                                <th>Warning</th>
+                                <th>2-4 day ban</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                        </table>
                 </div>
             </div>
         </div>
-
+        </div>
+        <div id="gameplay">
         <h1>Gameplay Rules</h1>
         <h2>Rules specific to the Minecraft Server.</h2>
 
         <ol>
-            <li>
+            <li id="hacked_clients">
                 No Hacked Clients or Unfair Mods
                 <p>
                     The use of any hacked clients or mods/resource packs that give an unfair advantage over players is forbidden. This includes fly hacks, kill auras, speed hacks, aint-knockback, player highlighters, and x-ray to name a few. Use of hacks or unfair mods will be met with an extensive ban.
                 </p>
             </li>
-            <li>
+
+            <li id="griefing">
                 Do Not Grief or Steal From Claimed Land or New Players
                 <p>
-                    Do not grief or steal from another player's claimed land, regardless of access. This includes all containers, builds, and ships within. Additionally, it is recommended you get permission before taking another player’s ship from claimed land.
+                    Do not grief or steal from another player&apos;s claimed land, regardless of access. This includes
+                    all containers, builds, and ships within. Additionally, it is recommended you get permission before
+                    taking another player&apos;s ship from claimed land.
                     Ship ownership overrides that of the territory, this includes the ability to remove the ship from the claim. However the owner of the territory holds the right to take ownership of that ship, regardless of if it is locked.
                     Stealing crates or activating pistons to push crates also falls under this category, when the ship is in claimed land or a trade city.
                     Stealing and griefing the possessions of players with new player protection is not allowed, regardless of the land those contents were left in. Exceptions can be made for abandoned property.
                 </p>
             </li>
-            <li>
+
+            <li id="kill_new_players">
                 Do Not Kill New Players Unprovoked
                 <p>
                     Newer players will have a grace period where they may play without fear of being attacked. If a new player provokes another through combat, they will lose this protection and you may attack them. If a player has a star beside their name in chat, they are considered a new player and you must not provoke them.
                 </p>
             </li>
-            <li>
-                No Combat Logging/Releasing
+
+            <li id="combat_restrictions">
+                Combat restrictions.
                 <p>
-                    Combat releasing is the act of releasing a ship to prevent it from getting sunk in a battle. This will not be allowed. Combat releasing within a distance of 1000 blocks is not allowed, beyond this range you are allowed to release your ship, if you are in an ost you are also allowed to release your ship at any time. Combat logging is similar, whereas the player logs out to avoid combat.
-                    In the event a player is found guilty of combat logging staff will assume that the player would have lost the fight, and in turn hand over the players ship and inventory over to the would be victor. The guilty player will not be banned.
-                    If a player logs back in within 5 minutes then it is not considered combat logging. However if your ship is destroyed during that 5 minutes, so be it.
-                    The reason for combat logging is not relevant, as staff are not able to verify the legitimacy of the reason. This includes issues such as computer crashes.
+                    The following are not allowed while you are under attack:
+                </p>
+                <ul>
+                    <li><p>Releasing your ship to deny an attacker any reward </p></li>
+                    <li><p>Causing your own player to die </p></li>
+                    <li><p>Claiming land </p></li>
+                </ul>
+                <p>
+                    A player is considered under attack if an attacker has reached within 1000 meters of their player.
                 </p>
             </li>
-            <li>
+
+            <li id="boosting">
                 No Boosting
                 <p>
                     Boosting is the act of giving a player a substantial amount of credits for free in order to help them level up. This system was built with the idea of players working to level themselves. Any offense will be investigated and determined on a case-by-case basis, and we as a team will be determining whether a loophole was used or not.
                 </p>
             </li>
-            <li>
+
+            <li id="design_restrictions">
                 Ship design restrictions
                 <p>
                     To keep within the spirit of Ship vs Ship combat, purposefully awkward ships that are designed only to break the meta will not be allowed. This may include spindly ships that are impossible to hit, abusing the small minimum block counts of shuttles, or anything designed to give an overwhelming advantage at the cost of immersion. This does not apply to immobile ships. Staff discretion is used to determine what is in violation of this rule.
                 </p>
             </li>
-            <li>
+
+            <li id="planet_destruction">
                 No wanton destruction of planets.
                 <p>
                     Players should avoid actions that destroy the natural beauty of planets. Actions that may be covered under this rule maybe include: Large walls, and large scale surface mining.
                 </p>
             </li>
-            <li>
+
+            <li id="bug_exploitation">
                 Do Not Exploit Bugs or Glitches or Mechanics
                 <p>
                     Do not attempt to abuse a bug or glitch, known or unknown. If you discover such a feature, promptly report it to the submit a ticket detailing the issue and avoid touching it further. A bug or glitch is any feature that gives you an unfair advantage over other players.
                     Please reference the dropdown menu at the end of this page for a list of known methods of bug abuse.
+                </p>
+            </li>
+
+            <li id="respect_gameplay">
+                Respect Other Player's Experience
+                <p>
+                    Actions that intentionally interrupt the experience of other players are not allowed. This might
+                    include trapping a player or interrupting practice sessions.
                 </p>
             </li>
         </ol>
@@ -245,11 +357,63 @@
             </div>
             <div class="dropdown-content-container">
                 <div class="dropdown-content">
-                    <div class="dropdown-content-information">
-                        AAAAAAAAAAAAAAAA
-                    </div>
+                        <table>
+                            <tr>
+                                <th>Infraction</th>
+                                <th>Offense 1</th>
+                                <th>Offense 2</th>
+                                <th>Offense 3</th>
+                                <th>Offense 4</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('hacked_clients')" class="jump">Hacking/ Unfair Advantage</span></th>
+                                <th>
+                                    <span class="tooltip">Staff Discretion<span class="hoverText">It'd be impossible to outline the punishment for every hacking incident. Punishments will be decided by the severity of advantage, and the degree of the exploitation.</span></span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('griefing')" class="jump">Griefing</span></th>
+                                <th>1 day ban</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('kill_new_players')" class="jump">Causing Harm to New Players</span></th>
+                                <th>Warning, if unknowing. Items returned.</th>
+                                <th>1 day ban</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('combat_restrictions')" class="jump">Disallowed Activities in Combat</span></th>
+                                <th>Warning</th>
+                                <th>6-8 hour ban</th>
+                                <th>1-2 day ban</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('boosting')" class="jump">Boosting</span></th>
+                                <th>Warning</th>
+                                <th>1-2 day ban</th>
+                                <th>4-6 day ban</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('design_restrictions')" class="jump">Unfair Ship Designs</span></th>
+                                <th>Ship Deleted</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('planet_destruction')" class="jump">Unnecessary Planet Destruction</span></th>
+                                <th>Warning and cleanup</th>
+                                <th>Staff Discretion</th>
+                            </tr>
+                            <tr>
+                                <th><span onclick="jumpTo('bug_exploitation')" class="jump">Bug Exploitation</span></th>
+                                <th><span class="tooltip">Staff Discretion<span class="hoverText">It'd be impossible to outline the punishment for every bug here. Punishments will be decided by the severity of the bug, and the degree of the exploitation.</span></span></th>
+                            </tr>
+                        </table>
                 </div>
             </div>
+        </div>
         </div>
 
         <div class="dropdown">
@@ -259,7 +423,27 @@
             <div class="dropdown-content-container">
                 <div class="dropdown-content">
                     <div class="dropdown-content-information">
-                        AAAAAAAAAAAAAAAA
+                        <ul>
+                            <li>This list is not exhaustive - use your own common sense and report to staff if you believe there to be a method of bug abuse not listed in this document.</li>
+                            <li>Staff will try their best to keep this list fully updated, however you may still be banned for forms of bug abuse not present if deemed abusive.</li>
+                            <li>Any attempt to perform an action on this list, known or unknown, will be met with punishment. You have been warned.</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-content-entry">
+                        Any and all forms of duplication glitch.
+                        <p>Includes money, xp, items, ships, etc.</p>
+                    </div>
+                    <div class="dropdown-content-entry">
+                        Land protection bypassing.
+                        <p>Any method of bypassing the block edit protection of land. If this area also provides protection from PvP, any bypass of that functionality is also considered.</p>
+                    </div>
+                    <div class="dropdown-content-entry">
+                        Moving NPCs
+                        <p>Any method of moving server NPCs (Bazaars, tutorial droids, collectors, etc.) from their intended locations is considered bug abuse.</p>
+                    </div>
+                    <div class="dropdown-content-entry">
+                        Hyperspace Exploitation
+                        <p>Any method of staying in hyperspace for extended periods, or engaging in combat within is prohibited.</p>
                     </div>
                 </div>
             </div>
@@ -271,24 +455,13 @@
 <div id="bottomBar"></div>
 
 <script>
-    /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
-    function toggleDropdown(element) {
-        // Get the first content and toggle show
-        element.getElementsByClassName("dropdown-content")[0].classList.toggle("show");
-    }
+    function jumpTo(anchor) {
+        const url = location.href;
+        location.href = "#" + anchor;
+        history.replaceState(null, null, url);
 
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropdown-button')) {
-            const dropdowns = document.getElementsByClassName("dropdown-content");
-
-            for (let i = 0; i < dropdowns.length; i++) {
-                const openDropdown = dropdowns[i];
-
-                if (openDropdown.classList.contains('show')) openDropdown.classList.remove('show');
-            }
-        }
+        const element = document.getElementById(anchor)
+        element.classList.toggle("highlighted")
     }
 </script>
 

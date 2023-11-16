@@ -1,7 +1,7 @@
-@import "/style.css";
+@import "/style/style.css";
 
 #rules {
-    padding: 0% 0%;
+    padding: 0 0;
 }
 
 .tooltip {
@@ -22,6 +22,32 @@
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
+}
+
+.tooltip:hover .hoverText {
+    position: absolute;
+    display: block;
+    margin: 1%;
+}
+
+.jump {
+    cursor: pointer;
+    border-bottom: 1px dotted rgb(128, 128, 128);
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    text-align: left;
+    color: black;
+    border-collapse: collapse;
+    border: 1px solid #838383;
+}
+
+th, td {
+    padding: 1% 1% 1% 1%;
 }
 
 h1 {
@@ -49,11 +75,6 @@ li {
 li p {
     font-size: 66.6%;
     margin: 0 0 2% 0.5%;
-}
-
-.tooltip:hover .hoverText {
-    display: block;
-    margin: 1%;
 }
 
 .list-item {
@@ -99,11 +120,16 @@ li p {
 
 .dropdown-content-information {
     color: black;
-    padding: 1% 3% 1% 1.25%;
+    padding: 1% 1.25% 1% 1.25%;
     font-size: 100%;
     text-decoration: none;
     display: block;
     width: fit-content;
+}
+
+.dropdown-content-information ul li {
+    font-size: 75%;
+    padding: 0 0.5% 0 0.5%;
 }
 
 .dropdown-content-entry {
@@ -111,7 +137,7 @@ li p {
     padding: 1% 1.5% 1% 2%;
     text-decoration: none;
     display: block;
-    width: fit-content;
+    width: 95%;
 }
 
 .dropdown-content-entry p {
@@ -122,3 +148,11 @@ li p {
 .dropdown a:hover { background-color: #ddd; }
 
 .show { display: block; }
+
+.highlighted {
+    animation-name: highlight;
+    animation-duration: 1.5s;
+}
+@keyframes highlight {
+    from {background-color: #A0A0A0;}
+}
