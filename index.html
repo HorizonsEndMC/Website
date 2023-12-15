@@ -4,7 +4,6 @@
     <title>Horizon's End - Main Page</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Horizon's End is Minecraft's most advanced space server. Pilot your very own movable starship, no mods required. With 18 unique planets across 7 star systems, the only limit is your ambition. Shoot for the stars." name="description">
-
     <meta property="og:title" content="Horizons End"/>
     <meta property="og:type" content="website">
     <meta property="og:description" content="Horizon's End is Minecraft's most advanced space server. Pilot your very own movable starship, no mods required. With 18 unique planets across 7 star systems, the only limit is your ambition. Shoot for the stars."/>
@@ -17,24 +16,63 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Recursive:wght@300&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/scripts/includes.js"></script>
+    <link href="style/rss.css" rel="stylesheet">
+    <link href="style/ipsection.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!--  DO NOT TOUCH THIS TOOK ME SO LONG TO FIGURE OUT THIS IS A REQUIRED LIBARY FOR THE NAV AND FOOTER!!!!! -->
 </head>
-
 <body>
 <div id="topBar"></div>
-<!--REGULAR BEGULAR STUFF-->
+
 <div id="content-container">
-    <div id="content">
-        Horizon's End is a custom coded space Minecraft server. Pilot your very own movable starship, take over entire
-        sectors of space, avoid pirates, use hyperspace to explore the vast galaxy!
-        <br><br>
-        The galaxy is a sprawling space map, with 18 unique planets and 7 systems to visit. Our server has an active,
-        growing community that is welcoming to all new players.
-        <br><br>
-        Join a nation or create your own settlement, all with the goal of galactic domination. The possibilities are
-        endless!
+    <div class="contentbox" id="content">
+        <img class="logoimg" width="50px" src="images/HELOGO.png" alt="Horizons End Official Logo.">
+        <h1>What is <span class="titlespan">Horizon's End</span>?</h1>
+        <p>
+            <strong>Horizon's End</strong> is not just a Minecraft server; it's an entire galaxy waiting for you to explore and conquer.
+        </p>
+        <p>
+            Welcome to Horizon's End! It's a custom-coded space Minecraft server where you can pilot your very own movable <span>Starship</span>, take over entire sectors of space, avoid pirates, and use hyperspace to explore the vast galaxy!
+        </p>
+        <p>
+            The galaxy is a <span> 200k x 200k</span> space map with <span>17</span> unique planets to visit. Our server has an active, growing community that is welcoming to all new players. Join a nation or create your own settlement, all with the goal of galactic domination. The possibilities are endless!
+        </p>
+        <p>
+            Horizon's End includes features such as:
+        </p>
+        <ul>
+            <li><strong>Nations</strong></li>
+            <li><strong>Movecraft</strong></li>
+            <li><strong>PvP</strong></li>
+            <li><strong>SMP</strong></li>
+            <li><strong>Industry</strong></li>
+            <li><strong>Economy</strong></li>
+            <li><strong>Hyperspace</strong></li>
+        </ul>
+        <p>
+            ... and many more! Fight, Explore, Mine, Only on Horizon’s End!
+        </p>
+        <p>
+            The galaxy features 17 unique <strong>planets</strong> to explore and 7 diverse <strong>systems</strong> offering different challenges and opportunities.
+        </p>
+        <p class="hook">
+            So what will it be? Become a fearless <strong>explorer</strong>, a cunning <strong>trader</strong>, or a ruthless <strong>warlord</strong>? The galaxy is yours to conquer!
+        </p>
+        <div class="banner">
+            <h1>Join Today!</h1>
+            <div class="ip-section">
+                <input type="text" value="horizonsend.net" id="Ipinput" readonly>
+                <div class="tooltip">
+                    <button onclick="copyToClipboard()" onmouseout="resetTooltip()">
+                        <span class="tooltiptext" id="clipboardTooltip">Copy Ip To clipboard</span>
+                        Copy IP
+                    </button>
+                </div>
+
+            </div>
+            
     </div>
+</div>
+    
 	<div id = "discordWidget">
         <iframe class = "widget"
                 allowtransparency="true"
@@ -43,12 +81,73 @@
                 src="https://discord.com/widget?id=916891217596395631&theme=dark">
         </iframe>
     </div>
+
+
+
+
+     <!-- Recent Server Events (RSS Feed) -->
+     <div class="rssFeed" id="recentServerEvents">
+        <iframe src="rssFeed.html" width="100%" height="500" frameborder="0"></iframe>
+    </div>
+
 </div>
 <div id="bottomBar"></div>
+<script src="scripts/includes.js"></script>
+<script>
+    function copyToClipboard() {
+        var textToCopy = document.getElementById("Ipinput");
+
+        textToCopy.select();
+        textToCopy.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(textToCopy.value);
+
+        var tooltip = document.getElementById("clipboardTooltip");
+        tooltip.innerHTML = "IP Successfully Copied!";
+    }
+
+    function resetTooltip() {
+        var tooltip = document.getElementById("clipboardTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+    }
+</script>
+    <style>
+        .tooltip {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 140px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -75px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+        </style>
 </body>
 </html>
-<!--
-   IDEAS:
-   RSS FEED FROM DISCORD TO MAIN PAGE
-   DISCORD, PLAYER ACTIVITY
-   -->

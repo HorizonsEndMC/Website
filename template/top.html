@@ -20,7 +20,7 @@
     }
 </script>
 <div class="backgroundImage" id="topContent">
-    <a href="/" id="title">HORIZON'S END</a>
+    <a href="/Website-main/index.html" id="title">HORIZON'S END</a>
     <!--NAVIGATION BAR-->
     <div id="menu">
         <div id="mobileMenu" visible="false" onclick="expand()">MENU</div>
@@ -44,8 +44,8 @@
             <div class="menuItemContent">
                 <a href="https://www.planetminecraft.com/server/horizon-s-end/vote/">Vote on Planet Minecraft</a><br>
                 <a href="https://minecraftservers.org/vote/638205">Vote on MC Servers</a><br>
-                <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on Minecraft Server List</a><br>
-                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on Minecraft Multiplayer</a><br>
+                <a href="https://minecraft-server-list.com/server/489018/vote/">Vote on MC Server List</a><br>
+                <a href="https://minecraft-mp.com/server/306850/vote/">Vote on MC Multiplayer</a><br>
                 <a href="https://minecraft-mp.com/server/306850/vote/">Vote on TopG</a><br>
             </div>
         </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="menuItem">
-            <div class="menuItemTitle"><a href="/about">About</a><br></div>
+            <div class="menuItemTitle"><a href="about.html">About</a><br></div>
         </div>
         <div class="menuItem">
             <div class="menuItemTitle"><a href="https://wiki.horizonsend.net">Wiki</a><br></div>
@@ -70,7 +70,6 @@
 </div>
 <style>
     @import "/style/style.css";
-
     .backgroundImage {
         background-image:url("https://assets.horizonsend.net/WebsiteBannerKwazedilla1000x422.png");
         background-size: 100vw;
@@ -90,82 +89,84 @@
         font-size:350%;
         padding-top:15%;
         font-family: 'Aldrich', sans-serif;
-        text-decoration:none;
+        text-decoration: none;
         color:white;
         display:inline-block;
     }
 
     #menu {
-        z-index:2;
-        top:0;
-        position:sticky !important;
-    }
+    z-index: 2;
+    top: 0;
+    position: sticky !important;
+}
 
-    #mobileMenu {
-        font-family: 'Aldrich', sans-serif;
-        display:none;
-        font-size: 275%;
-        font-weight: bold;
-        background:#00C8FF;
-        margin:0;
-        width:100%;
-        text-align:center;
-        padding-top:0;
-        /*padding-bottom:5%;*/
-    }
+#mobileMenu {
+    font-family: 'Futura Windows Semibold', sans-serif;
+    display: none;
+    font-size: 275%;
+    font-weight: bold;
+    background:  linear-gradient(to left, #5189b3, #122363, #080e2b);
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+    /* padding-bottom:5%; */
+    transition: all 0.3s ease-in-out;
+}
 
-    .menuItem {
-        color:white;
-        display:inline-block;
-        position:relative;
-        padding:15px;
-        text-align:center;
-    }
+.menuItem {
+    color: white;
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s ease-in-out;
+}
 
-    .menuItem:hover {
-        background:rgba(230,230,230,0.9);
-        color:black;
-    }
+.menuItem:hover {
+    background:  white;
+    color: #080e2b;
+}
 
-    .menuItemContent {
-        z-index:3;
-        display:none;
-        position:absolute;
-        margin-top:15px;
-        background:rgba(230,230,230,0.9);
-        padding:15px;
-        width:250px;
-        left: 0;
-    }
+.menuItemContent {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin-top: 15px;
+    background: rgba(230, 230, 230, 0.9);
+    padding: 15px;
+    width: 250px;
+    left: 0;
+    transition: background 0.3s ease-in-out;
+}
 
-    .menuItemContent a {
-        text-decoration:none;
-        color:black;
-        line-height:2;
-        display:inline-block;
-        width:250px;
-        border:0 solid white;
-        text-align: left;
-        padding-left: 5px;
-    }
+.menuItemContent a {
+    text-decoration: none;
+    color: black;
+    line-height: 2;
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+    padding-left: 5px;
+    transition: background 0.3s, color 0.3s ease-in-out;
+}
 
-    .menuItemContent a:hover {
-        color:#00C8FF;
-        background:white;
-        border-left:5px solid #00C8FF;
-        border-right:5px solid #00C8FF;
-        border-radius:10px;
-        box-sizing:border-box;
-        transition: 0.5s;
-    }
+.menuItemContent a:hover {
+    color: white;
+    background: linear-gradient(to right, #5189b3, #122363, #080e2b);
+    border-left: 6px solid #5e9dce;
+    border-right: 6px solid #5e9dce;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
 
-    .menuItemContent a:visited {
-        color:black;
-    }
+.menuItemContent a:visited {
+    color: #f2ae67;
+}
 
-    .menuItem:hover .menuItemContent {
-        display:block !important;
-    }
+.menuItem:hover .menuItemContent {
+    display: block !important;
+}
 
     @media screen and (max-width: 700px){
         #title {
@@ -183,7 +184,6 @@
 
         .menuItemContent{
             display:none; /* Changed by togging the button */
-
             position:relative;
             box-sizing:border-box;
             width:100%;
@@ -191,9 +191,9 @@
             margin:0;
             z-index:1;
             height:100%;
-
-            background:lightgray;
-            border-bottom: 1px solid darkgray;
+            background:white;
+            margin-bottom: 3px;
+            border-bottom: 5px solid #122363;
         }
 
         #mobileMenu{ display:inline-block; }

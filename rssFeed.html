@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>RSS Feed Content</title>
+<link href="style/rss.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="header">Recent Server Events</h1>
+    <div class="rssFeed-frame">
+        <div class="countdown-container">
+        <h3 class="countdown-text" id="countdown"><span class="countdown-date" id="countdown-date"></span></h3>
+        <a class="more-btn" href="/" target="_blank">Learn More!</a>
+       
+        </div> 
+        <p>
+            <strong>Yesterday at 19:30</strong><br>
+            pqio has disbanded their settlement Gibraltar!<br>
+            Settlement Luxivitans joined the nation RentDueYesterday!
+        </p>
+        <p>
+            <strong>Yesterday at 22:57</strong><br>
+            AdelieXY of RentDueYesterday has initiated a siege on ImperialNova's Space Station RegulusCargoDepotAlpha<br>
+            FellOffBridge of RentDueYesterday has initiated a siege on Orovika's Space Station DeepSpaceSignalGamma
+        </p>
+        <p>
+            <strong>Yesterday at 23:12</strong><br>
+            Space Station RegulusCargoDepotAlpha has been captured by AdelieXY of RentDueYesterday from ImperialNova<br>
+            Space Station DeepSpaceSignalGamma has been captured by FellOffBridge of RentDueYesterday from Orovika
+        </p>
+        <p>
+            <strong>Yesterday at 23:20</strong><br>
+            Combat NPC of _Clone1137 was slain by eyrzeke
+        </p>
+        <p>
+            <strong>Today at 10:33</strong><br>
+            wialord, leader of the settlement Tacoma, founded the nation Excursion!
+        </p>
+        <p>
+            <strong>Today at 12:19</strong><br>
+            FellOffBridge of RentDueYesterday has initiated a siege on Shadow's Space Station IliosFuelDepot
+        </p>
+        <p>
+            <strong>Today at 12:35</strong><br>
+            Space Station IliosFuelDepot has been captured by FellOffBridge of RentDueYesterday from Shadow
+        </p>
+        <p>
+            <strong>Today at 16:01</strong><br>
+            SkillBo2 has founded the settlement Lumenor in Sluige Island on Aerach!
+        </p>
+    </div>
+    <style>
+
+    </style>
+    <script>
+        // Set the date of the next update
+        const updateDate = new Date('December 24, 2023 00:00:00 GMT+0000').getTime();
+    
+        // Update the countdown every second
+        const updateCountdown = setInterval(function() {
+            // Get the current date and time
+            const now = new Date().getTime();
+    
+            // Calculate the time difference
+            const timeDifference = updateDate - now;
+    
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+            // Display the countdown
+            document.getElementById('countdown').innerHTML = `Christmas Update! - <span id="countdown-date">${days}d ${hours}h ${minutes}m ${seconds}s</span>  `;
+    
+            // If the countdown is over, display a message
+            if (timeDifference < 0) {
+                clearInterval(updateCountdown);
+                document.getElementById('countdown').innerHTML = 'Update is happening now!';
+            }
+        }, 1000); // Update every second
+    </script>
+</body>
+</html>

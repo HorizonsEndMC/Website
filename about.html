@@ -10,45 +10,199 @@
     <meta property="og:description" content="Horizon's End is Minecraft's most advanced space server. Pilot your very own movable starship, no mods required. With 18 unique planets across 7 star systems, the only limit is your ambition. Shoot for the stars."/>
     <meta property="og:url" content="https://horizonsend.net"/>
     <meta property="og:image" content="https://horizonsend.net/images/HELOGO.png"/>
-
+    <link href="style/carouselthum.css" rel="stylesheet">
     <link href="icons/favicon.ico" rel="shortcut icon">
     <link href="style/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Recursive:wght@300&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!--  DO NOT TOUCH THIS TOOK ME SO LONG TO FIGURE OUT THIS IS A REQUIRED LIBARY FOR THE NAV AND FOOTER!!!!! -->
     <script src="/scripts/includes.js"></script>
 </head>
 <body>
 <div id="topBar"></div>
 <!--REGULAR BEGULAR STUFF-->
 <div id="content-container">
-    <div id="content">
-        Welcome to Horizon's End!<br>
-        Horizon's End is a custom coded space Minecraft server. Pilot your very own movable starship, take over entire
-        sectors of space, avoid pirates, use hyperspace to explore the vast galaxy! The galaxy is a 200k x 200k space map,
-        with 17 unique planets to visit. Our server has an active, growing community that is welcoming to all new players.
-        Join a nation or create your own settlement, all with the goal of galactic domination. The possibilities are
-        endless!<br>
-        <br>
-        Horizon's End includes features such as:<br>
-        <br>
-        <ul>
-            <li>Nations</li>
-            <li>Movecraft</li>
-            <li>PvP</li>
-            <li>SMP</li>
-            <li>Industry</li>
-            <li>Economy</li>
-            <li>Hyperspace</li>
-        </ul>
-        <br>
-        ... and many more! Fight, Explore, Mine, Only on Horizon’s End!<br>
-        <br>
-        IP: horizonsend.net<br>
-        <a href="https://wiki.horizonsend.net">Wiki</a>
+    <div id="content2">
+        <h1 class="headingtitle">Gallery</h1>
+        <h3>Horizon's End is a Minecraft space server featuring player-built 
+            controllable spaceships, custom crafting recipies, and complex industrial mechanics.
+             Conduct trade and wage war across a universe filled with beautiful hand-crafted planets.</h3> <hr>
+        <div class="carousel">
+            <input type="radio" name="slides" checked="checked" id="slide-1">
+            <input type="radio" name="slides" id="slide-2">
+            <input type="radio" name="slides" id="slide-3">
+            <input type="radio" name="slides" id="slide-4">
+            <input type="radio" name="slides" id="slide-5">
+            <input type="radio" name="slides" id="slide-6">
+            <input type="radio" name="slides" id="slide-7">
+            <ul class="carousel__slides">
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="./images/asterimapside.jpg" alt="Asteri System Map">
+                        </div>
+                        <figcaption>
+                            <h2>Asteri System</h2>
+                            <p>
+                                <strong>Sector size:</strong> 60000, 60000<br>
+                                <strong>Star class:</strong> M-type<br>
+                                <strong>Planet count:</strong> 5<br>
+                                <strong>Description:</strong> The Asteri System is a star system located in the galactic southeast corner of the Galaxy. It is the largest system compared to its neighbors, with five planets orbiting its star. Common asteroids contain Chetherite, Coal, and Iron.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="./images/iliosmapside.jpg" alt="Ilios System Map">
+                        </div>
+                        <figcaption>
+                            <h2>Ilios System</h2>
+                            <p>
+                                <strong>Sector size:</strong> 60000, 60000<br>
+                                <strong>Star class:</strong> G-type<br>
+                                <strong>Planet count:</strong> 4<br>
+                                <strong>Description:</strong> The Ilios System is a star system located in the southern corner of the Galaxy. Although a frontier system, it is unique for being the only civilized system that exists outside of The Core. Common asteroids include Aluminum, Quartz, and Titanium.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="./images/regulusmapside.jpg" alt="Regulus System Map">
+                        </div>
+                        <figcaption>
+                            <h2>Regulus System</h2>
+                            <p>
+                                <strong>Sector size:</strong> 60000, 60000<br>
+                                <strong>Star class:</strong> A-type<br>
+                                <strong>Planet count:</strong> 4<br>
+                                <strong>Description:</strong> The Regulus System is a star system located in the center of the Galaxy. It is famed as a hub of interstellar travel, having warp gates connecting to all three other civilized star systems. Common asteroids contain Copper, Gold, and Uranium.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="./images/siriusmapside.jpg" alt="Sirius System Map">
+                        </div>
+                        <figcaption>
+                            <h2>Sirius System</h2>
+                            <p>
+                                <strong>Sector size:</strong> 60000, 60000<br>
+                                <strong>Star class:</strong> G-type<br>
+                                <strong>Planet count:</strong> 4<br>
+                                <strong>Description:</strong> The Sirius System is a star system located in the galactic west side of the Galaxy. Common asteroids contain Gold, Iron, and Redstone.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="./images/horizonmapside.jpg" alt="Horizon System Map">
+                        </div>
+                        <figcaption>
+                            <h2>Horizon</h2>
+                            <p>
+                                <strong>Sector size:</strong> 30000, 30000<br>
+                                <strong>Star class:</strong> None<br>
+                                <strong>Planet count:</strong> 1<br>
+                                <strong>Description:</strong> Horizon is an empty, deep sector of space that serves as a major connection hub between other systems. Horizon is a perilous system to traverse and is known to only contain one Rogue Planet.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="./images/trenchmapside.jpg" alt="The Trench System Map">
+                        </div>
+                        <figcaption>
+                            <h2>The Trench</h2>
+                            <p>
+                                <strong>Sector size:</strong> 60000, 60000<br>
+                                <strong>Star class:</strong> None<br>
+                                <strong>Planet count:</strong> 0<br>
+                                <strong>Description:</strong> The Trench is a deep sector of space brimming with asteroids. Nearly all known asteroid types can be found here along with the highest ore rates for asteroids. This makes natural resource collection on a large scale fairly easy yet unsafe within this hostile system.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="./images/au0821mapside.jpg" alt="AU-0821 System Map">
+                        </div>
+                        <figcaption>
+                            <h2>AU-0821</h2>
+                            <p>
+                                <strong>Sector size:</strong> 60000, 60000<br>
+                                <strong>Star class:</strong> None<br>
+                                <strong>Planet count:</strong> 0<br>
+                                <strong>Description:</strong> AU-0821 is a deep sector in space filled with shipwrecks of unknown origin. Valuable materials can be found within chests aboard the wrecks, though they're often secured by lethal traps.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="carousel__thumbnails">
+                <li>
+                    <label for="slide-1"><img class="thumbnails" src="./images/asteroid_asteri.png" alt="Asteri System Thumbnail"></label>
+                </li>
+                <li>
+                    <label for="slide-2"><img class="thumbnails" src="./images/asteroid_ilios.png" alt="Ilios System Thumbnail"></label>
+                </li>
+                <li>
+                    <label for="slide-3"><img class="thumbnails" src="./images/asteroid_regulus.png" alt="Regulus System Thumbnail"></label>
+                </li>
+                <li>
+                    <label for="slide-4"><img class="thumbnails" src="./images/asteroid_sirius.png" alt="Sirius System Thumbnail"></label>
+                </li>
+                <li>
+                    <label for="slide-5"><img class="thumbnails" src="./images/horizonmapside.jpg" alt="Horizon System Thumbnail"></label>
+                </li>
+                <li>
+                    <label for="slide-6"><img class="thumbnails" src="./images/trenchmapside.jpg" alt="The Trench System Thumbnail"></label>
+                </li>
+                <li>
+                    <label for="slide-7"><img class="thumbnails" src="./images/au0821mapside.jpg" alt="AU-0821 System Thumbnail"></label>
+                </li>
+            </ul>
+        </div>
+        <a href="https://survival.horizonsend.net/#" class="mapgrab">Explore Our <strong>Real-Time </strong> <u>Interactive</u> Map</a>
+
     </div>
 </div>
 <div id="bottomBar"></div>
+<script src="scripts/includes.js"></script>
+<script>
+    // Wait for the DOM to be ready
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all elements with the class "carousel__thumbnail-label"
+        var thumbnailLabels = document.querySelectorAll('.carousel__thumbnail-label');
+
+        // Add a click event listener to each element
+        thumbnailLabels.forEach(function (label) {
+            label.addEventListener('click', function (event) {
+                // Prevent the default behavior scrolling to the top bc annoying 
+                event.preventDefault();
+
+                // you can put any additional logic you need for handling the click event here
+                //  might want to update the main carousel image or perform other actions
+            });
+        });
+    });
+</script>
 </body>
 </html>
