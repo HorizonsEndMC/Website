@@ -1,5 +1,7 @@
 @import "/style/style.css";
 
+
+
 #rules {
     padding: 0 0;
 }
@@ -51,7 +53,7 @@ th, td {
 }
 
 h1 {
-    font-family: 'Aldrich', sans-serif;
+    font-family: 'Futura Windows Semibold', sans-serif;
     font-size: 45px;
     padding: 0 0 0 2%;
     margin: 3% 0 0 0;
